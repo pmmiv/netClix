@@ -1,0 +1,35 @@
+.card {
+  background: #fff;
+  border-radius: 2px;
+  height: 163px;
+  margin: 1rem;
+  position: relative;
+  width: 325px;
+  box-shadow: 0 2px 4px #333, 0 2px 4px #333;
+  text-align: left;
+  cursor: pointer;
+}
+
+.card > .img-container {
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  background:#212121;
+}
+.card > .img-container > img {
+  width: 100%
+}
+
+.card > .content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 15px;
+}
+
+.card > .content > ul {
+  list-style-type: none;
+}
+
+.card > .remove:hover {
+  color: #d50000;
+}
