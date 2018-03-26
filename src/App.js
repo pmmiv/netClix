@@ -27,9 +27,19 @@ class App extends Component {
     } else {
       this.setState( {showsToCheck: shows.map(show => show.id), correct: 0, showOrder: this.shuffle(shows), message: "Nope!"} );
     }
+    this.glow();
   };
 
-  shuffle = (shows) => {
+  glow = () => {
+    console.log("glow");
+    const getMessage = document.getElementById("msg");
+    getMessage.classList.add("glow");
+    setTimeout(function () {
+      getMessage.classList.remove("glow");
+    }, 501)
+  }
+
+  shuffle = shows => {
     var currentIndex = shows.length, temporaryValue, randomIndex;
 
     while (0 !== currentIndex) {
@@ -50,6 +60,7 @@ class App extends Component {
       <Wrapper>
         <Title>NETCLIX</Title>
         <Score
+          glow={this.glow}
           message={this.state.message}
           score={this.state.correct}
           highScore={this.state.highScore}

@@ -1,8 +1,6 @@
 .board {
-	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
-	max-width: 1767px;
+	width: 100%;
+	max-width: 1409px;
 	min-width: 726px;
 	display: flex;
 	justify-content: space-around;
